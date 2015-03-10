@@ -1,0 +1,223 @@
+{{template "header" .}}
+    <title> 注册-金冠直通车 · 中小规模电商运营第一品牌.
+    </title>
+  <script src="/static/js/md5.js"></script>
+  <script type="text/javascript" src="/static/js/registervalid.js"></script>  
+  </head>
+  <body data-spy="scroll" data-target="#scrollspy" class="">
+    <div class="container-full">
+    <!-- Global navigation scheme(s)
+    ================================================== -->
+    {{template "navibar" .}}
+        <div class="jumbotron">
+          <div class="register"> <!-- Calling the background image -->
+            <div class="container">
+              <div class="wrapper">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h1>
+                      
+                    </h1>
+                  </div> <!-- /.col -->
+                </div> <!-- /.row -->
+                <div class="row">
+                  <div class="col-md-12">                                  
+                      <div class="row" align="center">
+                        <div class="col-md-12">
+                          <br>
+                          <h1 class="framed">
+                            
+                      运 营 账 户
+
+                          </h1>
+                        </div> <!-- /.col -->
+                      </div> <!-- /.row -->
+                  </div> <!-- /.col -->
+                </div> <!-- /.row -->
+              </div> <!-- /.wrapper -->
+            </div> <!-- /.container -->
+          </div> <!-- /.landing -->
+        </div> <!-- /.jumbotron -->
+        <div class="empty">
+          <a name="accreg" id="accreg"></a>
+            <div class="cushion">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12" align="center">
+                    <h1>
+                      金冠·直通车之路
+                    </h1>
+                  </div>
+                </div> <!-- /.row -->
+                <div class="spacer"></div>
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <ul class="progress-steps">                      
+                        <li class="on">                         
+                            注册账户                        
+                        </li>
+                        <li class="text-muted">
+                          登记运营信息
+                        </li>
+                        <li class="text-muted">
+                          选择并确认服务
+                        </li>
+                        <li class="text-muted">
+                          开始店铺智能运营
+                        </li>
+                    </ul>
+                  </div> <!-- /.col -->
+                  <div class="col-md-3"></div>
+                </div> <!-- /.row -->
+              </div> <!-- /.container -->
+            </div> <!-- /.cushion -->
+          </div> <!-- /.empty -->
+        
+        <div class="light">
+          <div class="cushion-lg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <form action="/register" id="registration" method="post">                    
+                    <div class="table-responsive">
+          <table class="table-signup">
+            <tbody><tr>
+              <td>
+                <div class="form-group">
+                <label for="id_first_name">账户名:</label>
+                <span class="required">*</span>
+                <input class="form-control input-sign-up" id="uname" maxlength="255" name="uname" placeholder="账户名" type="text">
+                {{if .DupUser}}<i class="fa fa-lg fa-info-circle" style="color:#8b001a;"></i>账号已存在！{{end}}    
+                </div>    
+              </td>              
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="form-group">
+                <label for="id_email">密码:</label>
+                <span class="required">*</span>
+                <input class="form-control input-sign-up" id="pwd" maxlength="75" name="pwd" placeholder="密码" type="password">
+                </div>
+              </td>
+            </tr>
+              <tr><td colspan="2">
+                <div class="form-group">
+                <label for="id_phone">重复密码:</label>
+                <input class="form-control input-sign-up" id="pwd2" maxlength="25" name="pwd2" placeholder="重复密码以确认" type="password">    
+                </div>            
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="form-group">
+                <label for="id_referrer">小主是从哪里知道[金冠·直通车]的?</label>
+                <input class="form-control input-sign-up" id="source" maxlength="50" name="source" placeholder="比如：朋友介绍，广告邮件，通过搜索引擎，微博，微信？" type="text">                
+                </div>
+              </td>
+            </tr>            
+          </tbody>
+        </table>
+        </div>
+
+                    <div class="spacer-sm"></div>
+                    <p style="margin-left:4px;">
+                      
+                        <button class="btn btn-lg btn-success" form="registration" type="submit">
+                          
+                    确认注册
+
+                        </button>
+                      
+                    </p>
+                  </form>
+                </div> <!-- /.col -->
+                <div class="col-sm-4">
+                  
+            <p><br/></p>
+            <h3>
+              注册须知
+            </h3>
+            <div class="divider-lg"></div>
+            <p class="">
+              只要经过简单的注册，小主就可以加入我们这个充满活力的大家庭了。在金冠直通车，我们不仅让软件更聪明，更让您的店铺运营过程更有乐趣，更直观。网站所有的服务均是一对一的服务，不会存在用户信息被他人窥探的风险。
+            </p>
+
+                  <div class="spacer"></div>
+                  <blockquote class="small">
+                    <div id="sign-up-testimonial" class="carousel-signup slide" data-ride="carousel" data-interval="15000">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#sign-up-testimonial" data-slide-to="0" class="carousel-signup-indicators">
+                        </li>
+                        <li data-target="#sign-up-testimonial" data-slide-to="1" class="carousel-signup-indicators">
+                        </li>
+                        <li data-target="#sign-up-testimonial" data-slide-to="2" class="carousel-signup-indicators">
+                        </li>
+                      </ol>
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-signup-inner">
+                        <div class="item active left">
+                          <p class="text-muted">
+                            <em>
+                              "直通车是我见过的最有想象力的店铺运营工具，
+                              只需要几个简单的步骤，就能完成之前我们耗费
+                              大量精力才能完成的事情，大大节省了我们运营的精力"
+                            </em>
+                          </p>
+                          <p class="text-muted">
+                            <img src="/static/img/register/zxy.jpg" class="pull-left img-circle circle-pad-right" width="45" height="45">
+                            <em>
+                              张先生
+                              <br>
+                              淘宝店长, 广州，女装                              
+                            </em>
+                          </p>
+                        </div> <!-- /.item -->
+                        <div class="item next left">
+                          <p class="text-muted">
+                            <em>
+                              "我开始跟老板建议上直通车的时候，他还有怀疑态度，
+                              但是经过3个月左右的努力，店铺的销量获得了极大提升
+                              ，老板一直夸我推荐的对，真正懂得运营的软件才是好软件。"
+                            </em>
+                          </p>
+                          <p class="text-muted">
+                            <img src="/static/img/register/lx.jpg" class="pull-left img-circle circle-pad-right" width="45" height="45">
+                            <em>
+                              李先生
+                              <br>
+                              店铺运营总监, 深圳，3C类产品
+                            </em>
+                          </p>
+                        </div> <!-- /.item -->
+                        <div class="item">
+                          <p class="text-muted">
+                            <em>
+                              "我是一个新人，刚开店不久，看了网上很多
+                              教程；也跟着实际操作了一段时间，发现
+                              实际跟学到的还是有差距。后来朋友介绍了解到了
+                              直通车，通过几个月的针对性运营，我的店铺终于
+                              有了起色，效果确实太明显了。"
+                            </em>
+                          </p>
+                          <p class="text-muted">
+                            <img src="/static/img/register/lrx.jpg" class="pull-left img-circle circle-pad-right" width="45" height="45">
+                            <em>
+                              刘小姐
+                              <br>
+                              店铺主, 上海，海淘
+                            </em>
+                          </p>
+                        </div> <!-- /.item -->
+                      </div> <!-- /.carousel-signup-inner -->
+                    </div> <!-- /#sign-up-testimonial -->
+                  </blockquote>
+                </div> <!-- /.col -->
+              </div> <!-- /.row -->
+            </div> <!-- /.container -->
+          </div> <!-- /.cushion -->
+        </div> <!-- /.light -->
+    {{template "footer" .}}
+</div>
+</body></html>

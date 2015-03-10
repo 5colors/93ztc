@@ -1,0 +1,39 @@
+$(document).ready(function(){
+		$('#login').validate({
+			errorElement:'span',
+			errorClass:'help-block',
+			focusInvalid:false,
+			rules:{
+				uname:{
+					required:true
+				},
+				pwd:{
+					required:true
+
+				}				
+			},
+			messages:{
+				uname:{
+					required:"登录名要给一个吧？"
+				},
+				pwd:{
+					required:"小主，密码总要来一个吧？"
+				}
+			},
+			highlight:function(element){
+				$(element).closest('.form-group').addClass('has-error');
+			},
+			success:function(label){
+				label.closest('.form-group').removeClass('has-error');
+				label.remove();
+			},
+			errorPlacement:function(error,element){
+				element.parent('div').append(error);
+			},
+			submitHandler:function(form){
+				$('#pwd').val(hex_md5($('#pwd').val()));				
+				form.submit();
+			}
+		})
+});
+

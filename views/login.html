@@ -1,0 +1,186 @@
+{{template "header" .}}
+    <title> 登陆-金冠直通车 · 中小规模电商运营第一品牌.
+    </title>
+  <script src="/static/js/md5.js"></script>
+  <script type="text/javascript" src="/static/js/loginvalid.js"></script>
+  </head>
+  <body data-spy="scroll" data-target="#scrollspy" class="">
+    <div class="container-full">
+    <!-- Global navigation scheme(s)
+    ================================================== -->
+    {{template "navibar" .}}
+        <div class="jumbotron">
+          <div class="login"> <!-- Calling the background image -->
+            <div class="container">
+              <div class="wrapper">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h1>
+                      
+                    </h1>
+                  </div> <!-- /.col -->
+                </div> <!-- /.row -->
+                <div class="row">
+                  <div class="col-md-12">                                  
+                      <div class="row" align="center">
+                        <div class="col-md-12">
+                          <br>
+                          <h1 class="framed">
+                            
+                      登 陆 账 户
+
+                          </h1>
+                        </div> <!-- /.col -->
+                      </div> <!-- /.row -->
+                  </div> <!-- /.col -->
+                </div> <!-- /.row -->
+              </div> <!-- /.wrapper -->
+            </div> <!-- /.container -->
+          </div> <!-- /.landing -->
+        </div> <!-- /.jumbotron -->
+        <div class="empty">
+           <a name="acclogin" id="acclogin"></a>
+            <div class="cushion">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12" align="center">
+                    <h1>
+                      欢迎回来！
+                    </h1>
+                  </div>
+                </div> <!-- /.row -->                        
+              </div> <!-- /.container -->
+            </div> <!-- /.cushion -->
+          </div> <!-- /.empty -->
+        
+        <div class="light">
+          <div class="cushion-lg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <form action="/login" id="login" method="post">              
+                   <div class="table-responsive">
+                    <table class="table-signup">
+                      <tbody><tr>
+                        <td>
+                          <div class="form-group">
+                          <label for="id_first_name">账户名:</label>
+                          <span class="required">*</span>
+                          <input class="form-control input-sign-up" id="uname" maxlength="255" name="uname" placeholder="账户名" type="text">    
+                          </div>    
+                        </td>              
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <div class="form-group">
+                          <label for="id_email">密码:</label>
+                          <span class="required">*</span>
+                          <input class="form-control input-sign-up" id="pwd" maxlength="75" name="pwd" placeholder="密码" type="password">
+                          </div>
+                          {{if .NotValidUser}}<p><i class="fa fa-lg fa-info-circle" style="color:#8b001a;"></i>账号或密码错误！</p>{{end}}  
+                        </td>
+                      </tr>                
+                    </tbody>
+                  </table>
+                </div>
+
+                    <div class="spacer-sm"></div>
+                    <p style="margin-left:4px;">
+                      
+                        <button class="btn btn-lg btn-success" form="login" type="submit">
+                          
+                    登陆系统
+
+                        </button>
+                      
+                    </p>
+                  </form>
+                </div> <!-- /.col -->
+                <div class="col-sm-4">
+                  <p><br/></p>
+            <h3>
+              安全提示
+            </h3>
+            <div class="divider-lg"></div>
+            <p class="">
+              欢迎回来！<br/>金冠·直通车将永远做小主的好帮手，技术的持续进化将会给您带来全新的店铺运营体验，我们也希望持续获得您的积极反馈，让我们的软件可以变得更高效而智能。
+            </p>
+
+                  <div class="spacer"></div>
+                  <blockquote class="small">
+                    <div id="sign-up-testimonial" class="carousel-signup slide" data-ride="carousel" data-interval="15000">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#sign-up-testimonial" data-slide-to="0" class="carousel-signup-indicators">
+                        </li>
+                        <li data-target="#sign-up-testimonial" data-slide-to="1" class="carousel-signup-indicators">
+                        </li>
+                        <li data-target="#sign-up-testimonial" data-slide-to="2" class="carousel-signup-indicators">
+                        </li>
+                      </ol>
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-signup-inner">
+                        <div class="item active left">
+                          <p class="text-muted">
+                            <em>
+                              "直通车是我见过的最有想象力的店铺运营工具，
+                              只需要几个简单的步骤，就能完成之前我们耗费
+                              大量精力才能完成的事情，大大节省了我们运营的精力"
+                            </em>
+                          </p>
+                          <p class="text-muted">
+                            <img src="/static/img/register/zxy.jpg" class="pull-left img-circle circle-pad-right" width="45" height="45">
+                            <em>
+                              张鑫益
+                              <br>
+                              淘宝店长, 广州，女装                              
+                            </em>
+                          </p>
+                        </div> <!-- /.item -->
+                        <div class="item next left">
+                          <p class="text-muted">
+                            <em>
+                              "我开始跟老板建议上直通车的时候，他还有怀疑态度，
+                              但是经过3个月左右的努力，店铺的销量获得了极大提升
+                              ，老板一直夸我推荐的对，真正懂得运营的软件才是好软件。"
+                            </em>
+                          </p>
+                          <p class="text-muted">
+                            <img src="/static/img/register/lx.jpg" class="pull-left img-circle circle-pad-right" width="45" height="45">
+                            <em>
+                              李翔
+                              <br>
+                              店铺运营总监, 深圳，3C类产品
+                            </em>
+                          </p>
+                        </div> <!-- /.item -->
+                        <div class="item">
+                          <p class="text-muted">
+                            <em>
+                              "我是一个新人，刚开店不久，看了网上很多
+                              教程；也跟着实际操作了一段时间，发现
+                              实际跟学到的还是有差距。后来朋友介绍了解到了
+                              直通车，通过几个月的针对性运营，我的店铺终于
+                              有了起色，效果确实太明显了。"
+                            </em>
+                          </p>
+                          <p class="text-muted">
+                            <img src="/static/img/register/lrx.jpg" class="pull-left img-circle circle-pad-right" width="45" height="45">
+                            <em>
+                              刘蕊欣
+                              <br>
+                              店铺主, 上海，海淘
+                            </em>
+                          </p>
+                        </div> <!-- /.item -->
+                      </div> <!-- /.carousel-signup-inner -->
+                    </div> <!-- /#sign-up-testimonial -->
+                  </blockquote>
+                </div> <!-- /.col -->
+              </div> <!-- /.row -->
+            </div> <!-- /.container -->
+          </div> <!-- /.cushion -->
+        </div> <!-- /.light -->
+    {{template "footer" .}}
+</div>
+</body></html>

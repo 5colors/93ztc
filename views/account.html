@@ -1,0 +1,262 @@
+{{template "header" .}}
+    <title> 账户管理-金冠直通车 · 中小规模电商运营第一品牌.
+    </title>
+    <script type="text/javascript">
+      function choose(element){
+        clearActiveLink();
+        element.attr('class','list-group-item active');
+      }
+      function clearActiveLink(){
+        var links = new Array();
+        links[0] = "targetshoplink";
+        links[1] = "myshoplink";
+        links[2] = "feedbacklink";
+        links[3] = "changepwdlink";
+        for(i =0;i<4;i++)
+        {
+          document.getElementById(links[i]).className = "list-group-item";
+        }
+      }   
+    </script>
+    <script type="text/javascript" src="/static/js/accountvalid.js"></script>
+  </head>
+  <body data-spy="scroll" data-target="#scrollspy" class="">
+    <div class="container-full">
+    <!-- Global navigation scheme(s)
+    ================================================== -->
+    {{template "navibar" .}}
+        <div class="jumbotron">
+          <div class="account"> <!-- Calling the background image -->
+            <div class="container">
+              <div class="wrapper">
+                <div class="row">
+                  <div class="col-md-10">
+                    <h1>                      
+                    </h1>
+                  </div> <!-- /.col -->
+                </div> <!-- /.row -->
+                <div class="row">
+                  <div class="col-md-12">                                  
+                      <div class="row" align="center">
+                        <div class="col-md-12">
+                          <br>
+                          <h1 class="framed">                            
+                      账 户 管 理
+                          </h1>
+                        </div> <!-- /.col -->
+                      </div> <!-- /.row -->
+                  </div> <!-- /.col -->
+                </div> <!-- /.row -->
+              </div> <!-- /.wrapper -->
+            </div> <!-- /.container -->
+          </div> <!-- /.landing -->
+        </div> <!-- /.jumbotron -->
+
+        <div class="empty">
+          <a name="accinfo" id="accinfo"></a>
+            <div class="cushion">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12" align="center">
+                    <h1>
+                      金冠·直通车之路
+                    </h1>
+                  </div>
+                </div> <!-- /.row -->
+                <div class="spacer"></div>
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <ul class="progress-steps">                      
+                        <li class="text-muted">                         
+                            注册账户                        
+                        </li>
+                        <li class="on">
+                          登记运营信息
+                        </li>
+                        <li class="text-muted">
+                          选择并确认服务
+                        </li>
+                        <li class="text-muted">
+                          开始店铺智能运营
+                        </li>
+                    </ul>
+                  </div> <!-- /.col -->
+                  <div class="col-md-3"></div>
+                </div> <!-- /.row -->
+              </div> <!-- /.container -->
+            </div> <!-- /.cushion -->
+          </div> <!-- /.empty -->
+        
+        <div class="light">          
+          <div class="cushion-lg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-8 container">
+                    <div class="container" style ="width:90%">
+                      <form id="accountform" name= "accountform" method = "POST" action = "/account" role="form">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td style="width:20%"><!--menu -->
+                                <div class="list-group">
+                                  <a id="targetshoplink" href="#targetshop" onclick="choose($(this));" class="list-group-item active" data-toggle="tab">目标店铺</a>
+                                  <a id="myshoplink" href="#myshop" onclick="choose($(this));" class="list-group-item" data-toggle="tab">小主店铺</a>
+                                  <a id="feedbacklink" href="#feedback" onclick="choose($(this));" class="list-group-item" data-toggle="tab">投诉建议</a>
+                                  <a id="changepwdlink" href="#changepwd" onclick="choose($(this));" class="list-group-item" data-toggle="tab">修改密码</a>                      
+                                </div>
+                              </td>             
+                              <td style="width:80%"><!-- content for tabs-->
+                                <div id="tabContent" class="tab-content">
+                                  <div id="targetshop" class="well tab-pane fade in active" style="width:100%">
+                                    <p>
+                                      <div class="form-group">
+                                        <label >目标店主旺旺号：</label>                          
+                                        <input type="text" class="form-control" placeholder="输入店主旺旺号" name ="targetshopid" id="targetshopid">
+                                        <label>&nbsp;&nbsp;<i class="fa fa-lg fa-warning" style="color:#4b2686;"></i>请务必确认店主的旺旺号是否正确无误，注意中文，及中文之间的空格！</label>
+                                      </div>  
+                                      <div class="form-group">
+                                        <label >目标店铺名称：</label>
+                                        <input type="text" class="form-control" placeholder="输入店铺名称" name ="targetshopname" id="targetshopname">
+                                        <label>&nbsp;&nbsp;<i class="fa fa-lg fa-warning" style="color:#4b2686;"></i>请务必确认目标店铺名称是否正确无误，注意中文，及中文之间的空格！店名最好直接从网站上拷贝！</label>
+                                      </div>  
+                                      <div class="form-group">
+                                        <label >目标店铺类型：</label>
+                                          <select id="targetshoptype" name="targetshoptype">
+                                            <option value ="淘宝">淘宝</option>
+                                            <option value ="天猫">天猫</option>                            
+                                          </select>
+                                          &nbsp;&nbsp;<i class="fa fa-lg fa-info-circle" style="color:#8b001a;"></i> 店铺类型对于后台数据分析工具正确提取数据有帮助，请务必选择正确
+                                      </div>  
+                                    </p>
+                                  </div>
+                                  <div id="myshop" class="well tab-pane fade in " style="width:100%">
+                                    <p>
+                                      <div class="form-group">
+                                        <label >我的旺旺号：</label>
+                                        <input type="text" class="form-control" id="myshopid" placeholder="输入店主旺旺号" name ="myshopid">
+                                         <label>&nbsp;&nbsp;<i class="fa fa-lg fa-warning" style="color:#4b2686;"></i>请务必确认旺旺号正确无误，注意中文，及中文之间的空格！</label>
+                                      </div>  
+                                      <div class="form-group">
+                                        <label >我的店铺名称：</label>
+                                        <input type="text" class="form-control" id="myshopname" placeholder="输入店铺名称" name ="myshopname">
+                                        <label>&nbsp;&nbsp;<i class="fa fa-lg fa-warning" style="color:#4b2686;"></i>请务必确认您的店铺名称是否正确无误，注意中文，及中文之间的空格！店名最好直接从网站上拷贝！</label>
+                                      </div>  
+                                      <div class="form-group">
+                                        <label >我的店铺类型：</label>
+                                          <select id="myshoptype" name="myshoptype">
+                                            <option value ="淘宝">淘宝</option>
+                                            <option value ="天猫">天猫</option>                            
+                                          </select>
+                                          &nbsp;&nbsp;<i class="fa fa-lg fa-info-circle" style="color:#8b001a;"></i> 店铺类型对于后台数据分析工具正确提取数据有帮助，请务必选择正确
+                                      </div>  
+                                    </p>
+                                  </div>
+                                  <div id="feedback" class="well tab-pane fade in " style="width:100%">
+                                    <p>
+                                      <div class="form-group">
+                                        <label>反馈标题</label>
+                                        <input type="text" class="form-control" placeholder="标题" name="feedbacktitle" id="feedbacktitle">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>反馈内容</label>
+                                        <textarea class="form-control" rows="8" placeholder="建议和意见内容" name="feedbackcontent" id="feedbackcontent"></textarea>
+                                      </div>
+                                      <p/>                        
+                                      <label><i class="fa fa-lg fa-info-circle" style="color:#8b001a;"></i> 历史意见反馈结果</label>
+                                      <table class="table table-bordered table-hover">
+                                        <thead>
+                                          <tr>
+                                            <td>No.</td>
+                                            <td>标题</td>
+                                            <td>内容摘要</td>
+                                            <td>开发反馈</td>
+                                            <td>提交时间</td>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          {{range .feedbacks}}
+                                          <tr>                              
+                                            <td>{{.Id}}</td>
+                                            <td>{{.Title}}</td>
+                                            <td>{{.Content}}</td>
+                                            <td>{{.DevFeedback}}</td>
+                                            <td>{{.CreateTime}}</td>                              
+                                          </tr>
+                                          {{end}}
+                                        </tbody>
+                                      </table>
+                                    </p>
+                                  </div>
+                                  <div id="changepwd" class="well tab-pane fade in " style="width:100%">
+                                    <p>
+                                      <div class="form-group">
+                                        <label >原登陆密码</label>
+                                        <input type="password" class="form-control" placeholder="输入旧密码" name ="oldpwd" id="oldpwd">
+                                          {{if .IsOldPwdError}}
+                                          <label>&nbsp;&nbsp;
+                                          <i class="fa fa-lg fa-warning" style="color:#4b2686;"></i>密码输入错误！</label>
+                                          {{end}}
+                                      </div>
+                                      <div class="form-group">
+                                        <label >新登陆密码</label>
+                                        <input type="password" class="form-control" placeholder="输入新密码" name ="newpwd" id="newpwd">
+                                      </div>
+                                      <div class="form-group">
+                                        <label >重复新登陆密码</label>
+                                        <input type="password" class="form-control" placeholder="再输入一次新密码" name ="newpwd2" id="newpwd2">
+                                      </div>
+                                    </p>
+                                  </div>                                  
+                                </div>
+                                <div class="form-group"> 
+                                {{if .IsShopSetted}}                               
+                                  小主已经设置好基本运营参数，可以进一步<a href="/service" class="btn-warning">设置服务类型</a>                              
+                                  {{end}}
+                                  <button type="submit" class="btn btn-primary pull-right" name="submitbutton" id="submitbutton">提交</button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>          
+                      </form>
+                    </div>
+                  </div>
+                </div> <!-- /.col -->
+              </div> 
+            </div>
+          </div>
+        </div>
+
+
+      <div class="blue border">
+      <div class="cushion inner-border">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <i class="fa fa-4x fa-warning" style="color:red"></i><font color="#ffffff">
+            </div>
+            <div class="col-md-10">
+              <h3>金冠·直通车不会以任何方式获取您的店铺登陆账号和密码，我们将持续保持完全独立的数据运营方式协助小主进行店铺运营。
+                在需要授权的某些特殊情况下，
+                我们将会提供相关接口或者直接通过客服征得小主的同意之后才会进行下一步工作，请务必知晓。</font>
+              </h3>
+            </div> <!-- /.col -->            
+          </div> <!-- /.row -->
+        </div> <!-- /.container -->
+      </div> <!-- /.cushion -->
+    </div> <!-- /.blue -->
+
+    {{template "footer" .}}
+</div>
+</body>
+<script type="text/javascript">
+  accountform.targetshopid.value = "{{.watchedShopId}}";
+  accountform.targetshopname.value = "{{.watchedShopName}}";
+  accountform.targetshoptype.value = "{{.watchedShopType}}";
+  accountform.myshopid.value = "{{.watcherShopId}}";
+  accountform.myshopname.value = "{{.watcherShopName}}";
+  accountform.myshoptype.value = "{{.watcherShopType}}";
+</script>
+</html>
