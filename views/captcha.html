@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>upload captcha</title>
+</head>
+<body>
+	<!--
+	<form action="/captcha" method="post" enctype ="multipart/form-data" >
+                <input id="File1" name="captchafile" type="file" /> 
+                <input type="submit" name="Button1" value="Button" id="Button1" />
+            </form>
+	-->
+	<form action="/captcha/input" method="post">
+		<input id="crawlerid" name="crawlerid" type="hidden" value="{{.crawlerid}}"/>
+		<input id="itemid" name="itemid" type="hidden" value="{{.itemid}}"/> 
+    	<img src="/uploadcaptcha/{{.filename}}" />
+    	<input id="result" name="result" type="text"></input>
+    	<input type="submit" name="Button1" value="提交" id="Button1" />
+	</form>
+</body>
+</html>

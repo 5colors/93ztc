@@ -24,4 +24,6 @@ func init() {
 	beego.Router("/articles", &controllers.ArticlesController{})
 	beego.Router("/roadmap", &controllers.RoadmapController{})
 	beego.Router("/maillist", &controllers.MailListController{})
+	beego.Router("/captcha", &controllers.CaptchaController{})
+	beego.Router("/captcha/input", &controllers.CaptchaController{}, "post:InputResult")
 }
